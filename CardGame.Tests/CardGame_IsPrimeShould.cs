@@ -1,5 +1,5 @@
 using Xunit;
-using CardGame.Services;
+using CardGame;
 
 namespace Prime.UnitTests.Services
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CardGame.Services
+namespace CardGame
 {
   public class Program
   {
