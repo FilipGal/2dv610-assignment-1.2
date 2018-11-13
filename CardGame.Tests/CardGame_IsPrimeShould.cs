@@ -5,17 +5,17 @@ namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly CardGameService _CardGameService;
+        private readonly Program _CardGame;
 
         public PrimeService_IsPrimeShould()
         {
-            _CardGameService = new CardGameService();
+            _CardGame = new Program();
         }
 
         [Fact]
         public void ReturnFalseGivenValueOf1()
         {
-            var result = _CardGameService.IsPrime(1);
+            var result = _CardGame.IsPrime(1);
 
             Assert.False(result, "1 should not be prime");
         }

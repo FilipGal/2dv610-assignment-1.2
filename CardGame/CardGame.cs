@@ -2,7 +2,7 @@
 
 namespace CardGame.Services
 {
-  public class CardGameService
+  public class Program
   {
     public bool IsPrime(int candidate)
     {
