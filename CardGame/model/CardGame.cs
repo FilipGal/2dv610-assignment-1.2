@@ -4,14 +4,9 @@ namespace CardGame.model
 {
   public class Game
   {
-    public bool Valid(string candidate)
+    public void StartGame()
     {
-      if (candidate == "Valid test")
-      {
-        return false;
-      }
       throw new NotImplementedException("Please create a test first");
     }
-
   }
 }
