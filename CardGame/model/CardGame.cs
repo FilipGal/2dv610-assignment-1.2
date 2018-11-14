@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace CardGame
+namespace CardGame.model
 {
   public class Program
   {
-    public bool IsPrime(int candidate)
+    public bool Valid(string candidate)
     {
-      if (candidate == 1)
+      if (candidate == "Valid test")
       {
         return false;
       }
