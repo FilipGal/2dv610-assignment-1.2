@@ -3,10 +3,14 @@ using System.Collections.Generic;
 
 namespace CardGame.model
 {
-    public class Card
+  public class Card
+  {
+
+    private int cardValue = 2;
+    
+    public int GetCardValue()
     {
-      public int GetCardValue() {
-          return 1;
-      }
+      return cardValue;
     }
+  }
 }
