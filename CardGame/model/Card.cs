@@ -6,7 +6,7 @@ namespace CardGame.model
   public class Card
   {
 
-    private int cardValue = 2;
+    private int cardValue = 5;
     
     public int GetCardValue()
     {
@@ -14,7 +14,7 @@ namespace CardGame.model
     }
     public int SetCardValue(int value)
     {
-      throw new NotImplementedException("Not yet implemented");
+      return value = cardValue;
     }
   }
 }
