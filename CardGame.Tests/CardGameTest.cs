@@ -1,7 +1,7 @@
 using Xunit;
-using CardGame;
+using CardGame.model;
 
-namespace Prime.UnitTests.Services
+namespace CardGame.Tests
 {
     public class PrimeService_IsPrimeShould
     {
@@ -15,9 +15,8 @@ namespace Prime.UnitTests.Services
         [Fact]
         public void ReturnFalseGivenValueOf1()
         {
-            var result = _CardGame.IsPrime(1);
-
-            Assert.False(result, "1 should not be prime");
+            var result = _CardGame.Valid("Valid test");
+            Assert.False(result, "The string should be 'Valid test'");
         }
     }
 }
