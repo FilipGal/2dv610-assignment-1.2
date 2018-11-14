@@ -13,5 +13,15 @@ namespace CardGame.Tests
       int expected = sut.GetCardValue();
       Assert.InRange(expected, 2, 10);
     }
+
+    [Fact]
+    public void ShouldSetCardValue()
+    {
+      Card sut = new Card();
+      int actual = sut.SetCardValue(5);
+      int expected = 5;
+
+      Assert.Equal(actual, expected);
+    }
   }
 }

@@ -12,5 +12,9 @@ namespace CardGame.model
     {
       return cardValue;
     }
+    public int SetCardValue(int value)
+    {
+      throw new NotImplementedException("Not yet implemented");
+    }
   }
 }
