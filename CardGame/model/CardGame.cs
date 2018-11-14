@@ -2,7 +2,7 @@
 
 namespace CardGame.model
 {
-  public class Program
+  public class Game
   {
     public bool Valid(string candidate)
     {

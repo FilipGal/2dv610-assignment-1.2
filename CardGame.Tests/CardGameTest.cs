@@ -5,11 +5,11 @@ namespace CardGame.Tests
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly Program _CardGame;
+        private readonly Game _CardGame;
 
         public PrimeService_IsPrimeShould()
         {
-            _CardGame = new Program();
+            _CardGame = new Game();
         }
 
         [Fact]
