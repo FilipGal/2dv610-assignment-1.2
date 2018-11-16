@@ -6,7 +6,7 @@ namespace CardGame.model
   public class Card
   {
 
-    public int value { get; set; }
+    public CardValue value { get; set; }
 
     private int cardValue = 5;
 
