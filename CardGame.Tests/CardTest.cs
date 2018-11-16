@@ -28,5 +28,12 @@ namespace CardGame.Tests
       int actual = sut.SetCardValue(expected);
       Assert.Equal(actual, expected);
     }
+
+    [Fact]
+    public void CardValueIsCorrectType()
+    {
+      bool expected = sut.value is Enum;
+      Assert.True(expected);
+    }
   }
 }

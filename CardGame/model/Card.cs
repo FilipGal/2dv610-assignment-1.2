@@ -6,8 +6,10 @@ namespace CardGame.model
   public class Card
   {
 
+    public int value { get; set; }
+
     private int cardValue = 5;
-    
+
     public int GetCardValue()
     {
       return cardValue;
