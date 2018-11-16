@@ -17,7 +17,7 @@ namespace CardGame.Tests
     [Fact]
     public void DeckIsNotNull()
     {
-      var actual = sut.GenerateDeck();
+      List<Card> actual = sut.GenerateDeck();
       Assert.NotNull(actual);
     }
   }
