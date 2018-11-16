@@ -6,7 +6,7 @@ namespace CardGame.model
     public class Deck
     {
         public List<Card> GenerateDeck() {
-            throw new NotImplementedException("Not implemented");
+            return new List<Card>();
         }
     }
 }
