@@ -32,7 +32,7 @@ namespace CardGame.Tests
     [Fact]
     public void CardValueIsCorrectType()
     {
-      bool expected = sut.value is Enum;
+      bool expected = sut.value.GetType().IsEnum;
       Assert.True(expected);
     }
   }
