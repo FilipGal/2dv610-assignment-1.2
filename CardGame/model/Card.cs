@@ -7,7 +7,7 @@ namespace CardGame.model
   {
 
     public CardValue value { get; set; }
-    public int rank { get; set; }
+    public CardRank rank { get; set; }
     private int cardValue = 5;
 
     public int GetCardValue()
