@@ -14,6 +14,7 @@ namespace CardGame.model
     {
       return cardValue;
     }
+
     public int SetCardValue(int value)
     {
       return cardValue = value;

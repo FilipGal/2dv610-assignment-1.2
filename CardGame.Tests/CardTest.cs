@@ -29,18 +29,22 @@ namespace CardGame.Tests
       Assert.Equal(actual, expected);
     }
 
+    private void CardTypeIsEnum(Enum type)
+    {
+      bool expected = type.GetType().IsEnum;
+      Assert.True(expected);
+    }
+
     [Fact]
     public void CardValueIsCorrectType()
     {
-      bool expected = sut.value.GetType().IsEnum;
-      Assert.True(expected);
+      CardTypeIsEnum(sut.value);
     }
 
     [Fact]
     public void CardRankIsCorrectType()
     {
-      bool expected = sut.rank.GetType().IsEnum;
-      Assert.True(expected);
+      CardTypeIsEnum(sut.rank);
     }
   }
 }
