@@ -23,8 +23,9 @@ namespace CardGame.Tests
     [Fact]
     public void ShouldSetCardValue()
     {
-      int actual = sut.SetCardValue(5);
-      int expected = 5;
+      Random rnd = new Random();
+      int expected = rnd.Next(2, 10);
+      int actual = sut.SetCardValue(expected);
       Assert.Equal(actual, expected);
     }
   }
