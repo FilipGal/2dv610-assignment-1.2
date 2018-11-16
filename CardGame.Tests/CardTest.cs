@@ -35,5 +35,12 @@ namespace CardGame.Tests
       bool expected = sut.value.GetType().IsEnum;
       Assert.True(expected);
     }
+
+    [Fact]
+    public void CardRankIsCorrectType()
+    {
+      bool expected = sut.rank.GetType().IsEnum;
+      Assert.True(expected);
+    }
   }
 }
