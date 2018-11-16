@@ -1,7 +1,24 @@
+using System;
+using System.Collections.Generic;
+using Xunit;
+using CardGame.model;
+
 namespace CardGame.Tests
 {
-    public class DeckTest
+  public class DeckTest
+  {
+    Deck sut;
+
+    public DeckTest()
     {
-        
+      sut = new Deck();
     }
+
+    [Fact]
+    public void DeckIsNotNull()
+    {
+      var actual = sut.GenerateDeck();
+      Assert.NotNull(actual);
+    }
+  }
 }
