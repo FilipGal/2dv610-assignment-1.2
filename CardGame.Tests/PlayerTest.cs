@@ -4,18 +4,22 @@ using CardGame.model;
 
 namespace CardGame.Tests
 {
-    public class PlayerTest
+  public class PlayerTest
+  {
+    Player sut;
+    public PlayerTest()
     {
-        [Fact]
-        public void ShouldSetPlayerName()
-        {
-          Player player = new Player();
-
-          string actual = "Daniel";
-          player.SetPlayerName(actual);
-          string expected = player.name;
-
-          Assert.Equal(actual, expected);
-        }
+      sut = new Player();
     }
+
+    [Fact]
+    public void ShouldSetPlayerName()
+    {
+      string actual = "Daniel";
+      sut.SetPlayerName(actual);
+      string expected = sut.name;
+
+      Assert.Equal(actual, expected);
+    }
+  }
 }
