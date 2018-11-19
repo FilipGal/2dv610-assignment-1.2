@@ -36,7 +36,7 @@ namespace CardGame.model
 
     public void ShuffleCardDeck()
     {
-      throw new NotImplementedException("Not yet implemented");
+      cardDeck = cardDeck.OrderBy(c => Guid.NewGuid()).ToList();
     }
   }
 }
