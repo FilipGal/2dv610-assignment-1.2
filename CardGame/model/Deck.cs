@@ -26,5 +26,10 @@ namespace CardGame.model
     )
     .ToList();
     }
+
+    public Card RemoveCard()
+    {
+      throw new NotImplementedException("Not yet implemented");
+    }
   }
 }

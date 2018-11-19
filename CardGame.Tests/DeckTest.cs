@@ -28,5 +28,14 @@ namespace CardGame.Tests
       int actual = sut.cardDeck.Count;
       Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void ShouldDecreaseDeckSizeOnDrawnCard()
+    {
+      int expected = 51;
+      sut.RemoveCard();
+      int actual = sut.cardDeck.Count;
+      Assert.Equal(expected, actual);
+    }
   }
 }
