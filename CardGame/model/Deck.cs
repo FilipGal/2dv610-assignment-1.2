@@ -29,7 +29,9 @@ namespace CardGame.model
 
     public Card RemoveCard()
     {
-      throw new NotImplementedException("Not yet implemented");
+      Card card = cardDeck.FirstOrDefault();
+      cardDeck.Remove(card);
+      return card;
     }
   }
 }
