@@ -6,7 +6,7 @@ namespace CardGame.model
     public class Player
     {
         public string name;
-        public List<Card> hand;
+        public List<Card> hand = new List<Card>();
 
         public string SetPlayerName(string playerName)
         {
