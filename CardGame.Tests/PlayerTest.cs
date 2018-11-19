@@ -12,7 +12,7 @@ namespace CardGame.Tests
           Player player = new Player();
 
           string actual = "Daniel";
-          player.SetPlayerName();
+          player.SetPlayerName(actual);
           string expected = player.name;
 
           Assert.Equal(actual, expected);

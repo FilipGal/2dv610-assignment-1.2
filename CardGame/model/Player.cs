@@ -4,11 +4,11 @@ namespace CardGame.model
 {
     public class Player
     {
-        public string name = "";
+        public string name;
 
-        public void SetPlayerName()
+        public string SetPlayerName(string playerName)
         {
-          throw new NotImplementedException("Not yet implemented");
+          return name = playerName;
         }
     }
 }
