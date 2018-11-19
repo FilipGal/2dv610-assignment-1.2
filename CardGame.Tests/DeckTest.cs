@@ -22,10 +22,10 @@ namespace CardGame.Tests
     }
 
     [Fact]
-    public void DeckContaintsCorrectAmountOfCards() 
+    public void DeckContainsCorrectAmountOfCards()
     {
       int expected = 52;
-      var actual = sut.cardDeck.Count;
+      int actual = sut.cardDeck.Count;
       Assert.Equal(expected, actual);
     }
   }
