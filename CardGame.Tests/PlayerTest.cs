@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 using CardGame.model;
 
@@ -20,6 +21,15 @@ namespace CardGame.Tests
       string expected = sut.name;
 
       Assert.Equal(actual, expected);
+    }
+
+    [Fact]
+    public void PlayerShouldHaveAHand()
+    {
+      List<Card> expected = new List<Card>();
+      var actual = sut.hand;
+
+      Assert.Equal(expected, actual);
     }
   }
 }
