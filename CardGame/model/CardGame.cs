@@ -6,7 +6,8 @@ namespace CardGame.model
   {
     public void StartGame()
     {
-      throw new NotImplementedException("Please create a test first");
+      Deck deck = new Deck();
+      deck.GenerateDeck();
     }
   }
 }

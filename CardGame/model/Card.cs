@@ -8,16 +8,5 @@ namespace CardGame.model
 
     public CardValue value { get; set; }
     public CardRank rank { get; set; }
-    private int cardValue = 5;
-
-    public int GetCardValue()
-    {
-      return cardValue;
-    }
-
-    public int SetCardValue(int value)
-    {
-      return cardValue = value;
-    }
   }
 }
