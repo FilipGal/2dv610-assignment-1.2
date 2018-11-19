@@ -40,7 +40,7 @@ namespace CardGame.Tests
     {
       CardTypeIsEnum(sut.value);
     }
-
+ 
     [Fact]
     public void CardRankIsCorrectType()
     {
