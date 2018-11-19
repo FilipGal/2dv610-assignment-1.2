@@ -33,5 +33,10 @@ namespace CardGame.model
       cardDeck.Remove(card);
       return card;
     }
+
+    public void ShuffleCardDeck()
+    {
+      throw new NotImplementedException("Not yet implemented");
+    }
   }
 }

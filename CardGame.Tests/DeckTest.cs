@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Xunit;
 using CardGame.model;
@@ -36,6 +37,16 @@ namespace CardGame.Tests
       sut.RemoveCard();
       int actual = sut.cardDeck.Count;
       Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void CardDeckShouldBeShuffled()
+    {
+      Deck notShuffledDeck = new Deck();
+      sut.ShuffleCardDeck();
+      bool actual = notShuffledDeck.cardDeck.SequenceEqual(sut.cardDeck);
+
+      Assert.False(actual);
     }
   }
 }
