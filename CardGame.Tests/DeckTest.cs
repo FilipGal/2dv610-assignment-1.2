@@ -20,5 +20,13 @@ namespace CardGame.Tests
       List<Card> actual = sut.GenerateDeck();
       Assert.NotNull(actual);
     }
+
+    [Fact]
+    public void DeckContaintsCorrectAmountOfCards() 
+    {
+      int expected = 52;
+      var actual = sut.cardDeck.Count;
+      Assert.Equal(expected, actual);
+    }
   }
 }
