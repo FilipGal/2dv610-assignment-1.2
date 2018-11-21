@@ -1,4 +1,5 @@
 using System;
+using Moq;
 using System.Collections.Generic;
 using Xunit;
 using CardGame.model;
@@ -10,15 +11,18 @@ namespace CardGame.Tests
     Player sut;
     public PlayerTest()
     {
-      sut = new Player();
+      sut = new Player("foobar");
     }
 
     [Fact]
     public void ShouldSetPlayerName()
     {
-      string actual = "Daniel";
-      sut.SetPlayerName(actual);
-      string expected = sut.name;
+      string name = "spelare1";
+      var mock = new Mock<IPlayer>();
+      mock.SetupProperty(p => p.name, name);
+      IPlayer player = mock.Object;
+      string actual = name;
+      string expected = player.name;
 
       Assert.Equal(actual, expected);
     }
@@ -27,8 +31,7 @@ namespace CardGame.Tests
     public void PlayerShouldHaveAHand()
     {
       List<Card> expected = new List<Card>();
-      var actual = sut.hand;
-
+      List<Card> actual = sut.hand;
       Assert.Equal(expected, actual);
     }
   }

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 
 namespace CardGame.model
 {
-    public class Player
+  public class Player : IPlayer
+  {
+    public Player(string playerName)
     {
-        public string name;
-        public List<Card> hand = new List<Card>();
-
-        public string SetPlayerName(string playerName)
-        {
-          return name = playerName;
-        }
+      name = playerName;
     }
+
+    public virtual string name { get; set; }
+
+    public List<Card> hand = new List<Card>();
+  }
 }
