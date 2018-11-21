@@ -11,7 +11,7 @@ namespace CardGame.Tests
     Player sut;
     public PlayerTest()
     {
-      sut = new Player("foobar");
+      sut = new Player();
     }
 
     [Fact]
