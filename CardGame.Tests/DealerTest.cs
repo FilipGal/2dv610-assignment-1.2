@@ -16,7 +16,7 @@ namespace CardGame.Tests
     }
 
     [Fact]
-    public void DealerHasPropertyName()
+    public void DealerHasName()
     {
       string expected = "Dealer";
       string actual = sut.name;
