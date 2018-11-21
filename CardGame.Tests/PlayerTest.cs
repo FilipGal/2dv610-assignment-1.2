@@ -34,5 +34,19 @@ namespace CardGame.Tests
       List<Card> actual = sut.hand;
       Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void PlayerShouldRecieveCard()
+    {
+      Card card = new Card();
+
+      var mock = new Mock<IPlayer>();
+      mock.Setup(p => p.Hit());
+      IPlayer player = mock.Object;
+      
+      player.Hit();
+      bool actual = player.hand.Count > 0;
+      Assert.True(actual);
+    }
   }
 }

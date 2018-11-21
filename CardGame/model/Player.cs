@@ -13,5 +13,9 @@ namespace CardGame.model
 
     public virtual string name { get; set; }
 
+    public void Hit()
+    {
+      throw new NotImplementedException("Not yet implemented");
+    }
   }
 }
