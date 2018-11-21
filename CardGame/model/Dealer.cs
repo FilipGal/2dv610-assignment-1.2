@@ -1,7 +1,9 @@
+using System;
+
 namespace CardGame.model
 {
-    public class Dealer
-    {
-        
-    }
+  public class Dealer : Player
+  {
+
+  }
 }
