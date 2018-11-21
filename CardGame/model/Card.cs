@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace CardGame.model
 {
-  public class Card
+  public class Card : ICard<CardValue, CardRank>
   {
 
-    public CardValue value { get; set; }
-    public CardRank rank { get; set; }
+    public virtual CardValue value { get; set; }
+    public virtual CardRank rank { get; set; }
   }
 }
