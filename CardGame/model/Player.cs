@@ -14,6 +14,6 @@ namespace CardGame.model
 
     public virtual string name { get; set; }
 
-    public virtual void Hit(Card card) => throw new NotImplementedException("Not yet implemented");
+    public virtual void Hit(Card card) => hand.Add(card);
   }
 }
