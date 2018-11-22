@@ -14,16 +14,14 @@ namespace CardGame.Tests
       sut = new Player();
     }
 
-    // Should be a sut
     [Fact]
     public void ShouldSetPlayerName()
     {
       string name = "spelare1";
-      var mock = new Mock<IPlayer>();
-      mock.SetupProperty(p => p.name, name);
-      IPlayer player = mock.Object;
-      string actual = name;
-      string expected = player.name;
+      sut.name = name;
+
+      string actual = sut.name;
+      string expected = name;
 
       Assert.Equal(actual, expected);
     }
@@ -48,7 +46,7 @@ namespace CardGame.Tests
 
       int actual = sut.hand.Count;
       int expected = 1;
-      
+
       Assert.Equal(actual, expected);
     }
   }
