@@ -6,8 +6,9 @@ namespace CardGame.model
   {
     public void StartGame()
     {
-      Deck deck = new Deck();
-      deck.GenerateDeck();
+      CardFactory factory = new CardFactory();
+      Deck deck = new Deck(factory);
+      deck.GenerateDeck(factory);
     }
   }
 }
