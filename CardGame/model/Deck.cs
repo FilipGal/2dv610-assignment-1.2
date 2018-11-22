@@ -11,13 +11,13 @@ namespace CardGame.model
       GenerateDeck();
     }
 
-    public List<Card> cardDeck { get; private set; }
+    public virtual List<Card> cardDeck { get; private set; }
 
-    public List<Card> GenerateDeck()
+    public virtual void GenerateDeck()
     {
-      return cardDeck = Enumerable.Range(1, 4)
+      cardDeck = Enumerable.Range(1, 4)
       .SelectMany(r => Enumerable.Range(1, 13)
-        .Select(c => new Card()
+        .Select(c => new Card() // dolt beroende
         {
           rank = (CardRank)r,
           value = (CardValue)c
@@ -27,7 +27,7 @@ namespace CardGame.model
     .ToList();
     }
 
-    public Card RemoveCard()
+    public virtual Card RemoveCard()
     {
       Card card = cardDeck.FirstOrDefault();
       cardDeck.Remove(card);

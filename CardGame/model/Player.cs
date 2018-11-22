@@ -6,6 +6,7 @@ namespace CardGame.model
   public class Player : IPlayer
   {
     public virtual List<Card> hand { get; set; }
+
     public Player()
     {
       hand = new List<Card>();
@@ -13,9 +14,6 @@ namespace CardGame.model
 
     public virtual string name { get; set; }
 
-    public void Hit()
-    {
-      throw new NotImplementedException("Not yet implemented");
-    }
+    public virtual void Hit(Card card) => throw new NotImplementedException("Not yet implemented");
   }
 }

@@ -14,6 +14,7 @@ namespace CardGame.Tests
       sut = new Player();
     }
 
+    // Should be a sut
     [Fact]
     public void ShouldSetPlayerName()
     {
@@ -38,15 +39,17 @@ namespace CardGame.Tests
     [Fact]
     public void PlayerShouldRecieveCard()
     {
-      Card card = new Card();
+      var mock = new Mock<Deck>();
+      mock.Setup(d => d.GenerateDeck());
+      Deck deck = mock.Object;
 
-      var mock = new Mock<IPlayer>();
-      mock.Setup(p => p.Hit());
-      IPlayer player = mock.Object;
+      Card card = deck.RemoveCard();
+      sut.Hit(card);
+
+      int actual = sut.hand.Count;
+      int expected = 1;
       
-      player.Hit();
-      bool actual = player.hand.Count > 0;
-      Assert.True(actual);
+      Assert.Equal(actual, expected);
     }
   }
 }
