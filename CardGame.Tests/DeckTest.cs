@@ -9,19 +9,19 @@ namespace CardGame.Tests
   public class DeckTest
   {
     Deck sut;
+    CardFactory factory;
 
     public DeckTest()
     {
-      sut = new Deck();
+      factory = new CardFactory();
+      sut = new Deck(factory);
+      sut.GenerateDeck();
     }
 
     [Fact]
     public void DeckIsNotNull()
     {
-      sut.GenerateDeck();
-
       List<Card> actual = sut.cardDeck;
-
       Assert.NotNull(actual);
     }
 
@@ -45,7 +45,8 @@ namespace CardGame.Tests
     [Fact]
     public void CardDeckShouldBeShuffled()
     {
-      Deck notShuffledDeck = new Deck();
+      Deck notShuffledDeck = new Deck(factory);
+      notShuffledDeck.GenerateDeck(factory);
       sut.ShuffleCardDeck();
       bool actual = notShuffledDeck.cardDeck.SequenceEqual(sut.cardDeck);
 

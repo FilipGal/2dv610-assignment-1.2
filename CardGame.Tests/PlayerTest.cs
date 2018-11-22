@@ -9,8 +9,11 @@ namespace CardGame.Tests
   public class PlayerTest
   {
     Player sut;
+    CardFactory factory;
+
     public PlayerTest()
     {
+      factory = new CardFactory();
       sut = new Player();
     }
 
@@ -38,7 +41,7 @@ namespace CardGame.Tests
     public void PlayerShouldRecieveCard()
     {
       var mock = new Mock<Deck>();
-      mock.Setup(d => d.GenerateDeck());
+      mock.Setup(d => d.GenerateDeck(factory));
       Deck deck = mock.Object;
 
       Card card = deck.RemoveCard();
