@@ -13,9 +13,11 @@ namespace CardGame.Tests
 
     public DeckTest()
     {
+      // Mock mock = new mock<CardFactory>();
+      // mock.Setup(c => c.CreateCard(It.IsAny<CardRank>, It.IsAny<CardValue>)).Returns(); // Skapa specifika kort
       factory = new CardFactory();
-      sut = new Deck(factory);
-      sut.GenerateDeck();
+      sut = new Deck();
+      sut.GenerateDeck(factory); // Inject <Mock object> here
     }
 
     [Fact]
@@ -45,7 +47,7 @@ namespace CardGame.Tests
     [Fact]
     public void CardDeckShouldBeShuffled()
     {
-      Deck notShuffledDeck = new Deck(factory);
+      Deck notShuffledDeck = new Deck();
       notShuffledDeck.GenerateDeck(factory);
       sut.ShuffleCardDeck();
       bool actual = notShuffledDeck.cardDeck.SequenceEqual(sut.cardDeck);
