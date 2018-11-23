@@ -17,7 +17,8 @@ namespace CardGame.model
 
     public void CreateGame(Player p, Dealer d)
     {
-      throw new NotImplementedException("Not yet implemented");
+      player = p;
+      dealer = d;
     }
   }
 }
