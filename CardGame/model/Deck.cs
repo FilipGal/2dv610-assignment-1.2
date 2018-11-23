@@ -6,22 +6,19 @@ namespace CardGame.model
 {
   public class Deck
   {
-    public Deck(CardFactory factory)
-    {
-      GenerateDeck(factory);
-    }
-
     public virtual List<Card> cardDeck { get; private set; }
 
     public virtual void GenerateDeck(CardFactory factory)
     {
+      List<Card> card = new List<Card>();
       foreach (CardRank rank in Enum.GetValues(typeof(CardRank)))
       {
         foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
         {
-          cardDeck.Add(factory.CreateCard(rank, value));
+          card.Add(factory.CreateCard(rank, value));
         }
       }
+      cardDeck = card;
     }
 
     public virtual Card RemoveCard()
