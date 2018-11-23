@@ -13,7 +13,7 @@ namespace CardGame.Tests
             sut = new Game();
         }
 
-        [Fact]
+        
         public void GameHasPlayerAndDealer()
         {
             var fakeDealer = new Mock<Dealer>();
@@ -24,11 +24,13 @@ namespace CardGame.Tests
 
             sut.CreateGame(player, dealer);
 
-            bool playerExists = sut.player != null;
-            bool dealerExists = sut.dealer != null;
-            
-            Assert.True(playerExists);
-            Assert.True(dealerExists);
+            Assert.True(Exists(sut.player));
+            Assert.True(Exists(sut.dealer));
+        }
+        
+        public bool Exists(Player player)
+        {
+            return player != null;
         }
     }
 }
