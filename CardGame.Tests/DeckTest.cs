@@ -1,4 +1,5 @@
 using System;
+using Moq;
 using System.Linq;
 using System.Collections.Generic;
 using Xunit;
@@ -13,8 +14,6 @@ namespace CardGame.Tests
 
     public DeckTest()
     {
-      // Mock mock = new mock<CardFactory>();
-      // mock.Setup(c => c.CreateCard(It.IsAny<CardRank>, It.IsAny<CardValue>)).Returns(); // Skapa specifika kort
       factory = new CardFactory();
       sut = new Deck();
       sut.GenerateDeck(factory); // Inject <Mock object> here

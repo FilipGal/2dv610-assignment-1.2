@@ -7,10 +7,12 @@ namespace CardGame.Tests
   public class CardTest
   {
     Card sut;
+    CardRank rank = CardRank.Diamonds;
+    CardValue value = CardValue.Ace;
 
     public CardTest()
     {
-      sut = new Card(CardRank.Diamonds, CardValue.Ace);
+      sut = new Card(rank, value);
     }
 
     private void CardTypeIsEnum(Enum type)
