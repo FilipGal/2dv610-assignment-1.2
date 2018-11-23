@@ -1,0 +1,205 @@
+{
+  "CardGame.dll": {
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/Program.cs": {
+      "CardGame.Program": {
+        "System.Void CardGame.Program::Main(System.String[])": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/Card.cs": {
+      "CardGame.model.Card": {
+        "CardGame.model.CardRank CardGame.model.Card::get_rank()": {
+          "Lines": {
+            "8": 263
+          },
+          "Branches": []
+        },
+        "CardGame.model.CardValue CardGame.model.Card::get_value()": {
+          "Lines": {
+            "9": 263
+          },
+          "Branches": []
+        },
+        "System.Void CardGame.model.Card::.ctor(CardGame.model.CardRank,CardGame.model.CardValue)": {
+          "Lines": {
+            "11": 262,
+            "12": 262,
+            "13": 262,
+            "14": 262,
+            "15": 262
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/CardFactory.cs": {
+      "CardGame.model.CardFactory": {
+        "CardGame.model.Card CardGame.model.CardFactory::CreateCard(CardGame.model.CardRank,CardGame.model.CardValue)": {
+          "Lines": {
+            "7": 260
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/CardGame.cs": {
+      "CardGame.model.Game": {
+        "System.Void CardGame.model.Game::StartGame()": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/Dealer.cs": {
+      "CardGame.model.Dealer": {
+        "System.Void CardGame.model.Dealer::.ctor()": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/Deck.cs": {
+      "CardGame.model.Deck": {
+        "System.Collections.Generic.List`1<CardGame.model.Card> CardGame.model.Deck::get_cardDeck()": {
+          "Lines": {
+            "9": 15
+          },
+          "Branches": []
+        },
+        "System.Void CardGame.model.Deck::GenerateDeck(CardGame.model.CardFactory)": {
+          "Lines": {
+            "12": 5,
+            "13": 5,
+            "14": 55,
+            "15": 20,
+            "16": 580,
+            "17": 260,
+            "18": 260,
+            "19": 260,
+            "20": 20,
+            "21": 5,
+            "22": 5
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 137,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 20
+            },
+            {
+              "Line": 16,
+              "Offset": 105,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 260
+            },
+            {
+              "Line": 16,
+              "Offset": 105,
+              "EndOffset": 107,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 20
+            },
+            {
+              "Line": 14,
+              "Offset": 137,
+              "EndOffset": 139,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 5
+            }
+          ]
+        },
+        "CardGame.model.Card CardGame.model.Deck::RemoveCard()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        },
+        "System.Void CardGame.model.Deck::ShuffleCardDeck()": {
+          "Lines": {
+            "32": 1,
+            "33": 53,
+            "34": 1
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 14,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/home/filip/Skolarbeten/2dv610/2dv610-assignment-1.2/CardGame/model/Player.cs": {
+      "CardGame.model.Player": {
+        "System.Collections.Generic.List`1<CardGame.model.Card> CardGame.model.Player::get_hand()": {
+          "Lines": {
+            "8": 7
+          },
+          "Branches": []
+        },
+        "System.String CardGame.model.Player::get_name()": {
+          "Lines": {
+            "15": 4
+          },
+          "Branches": []
+        },
+        "System.Void CardGame.model.Player::Hit(CardGame.model.Card)": {
+          "Lines": {
+            "17": 1
+          },
+          "Branches": []
+        },
+        "System.Void CardGame.model.Player::.ctor()": {
+          "Lines": {
+            "10": 4,
+            "11": 4,
+            "12": 4,
+            "13": 4
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
